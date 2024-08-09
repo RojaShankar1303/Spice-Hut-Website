@@ -1,0 +1,722 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+:root{
+    --green:#27ae60;
+    --red:rgb(255, 0, 0);
+    --black:#192a56;
+    --light-color:#666;
+    --box-shadow: 0 .5rem 1.5rem rgba(0,0,0 .1);
+}
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration:none;
+    outline: none;
+    border: none;
+    /*text-transform:lowercase;*/
+    transition: all .2s linear;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+
+/* Add this to your existing CSS code or in a new style tag */
+p {
+    text-transform: lowercase;
+}
+
+p::first-letter {
+    text-transform: uppercase;
+}
+/* Add this to your existing CSS code or in a new style tag */
+
+h2 {
+    text-transform: lowercase;
+}
+h2::first-letter {
+    text-transform: uppercase;
+}
+
+/* Add this to your existing CSS code or in a new style tag */
+
+h3 {
+    text-transform: lowercase;
+}
+
+h3::first-letter {
+    text-transform: uppercase;
+}
+/* Add this to your existing CSS code or in a new style tag */
+.content {
+    text-transform: lowercase;
+}
+.content::first-letter {
+    text-transform: uppercase;
+}
+
+/* Add this to your existing CSS code or in a new style tag */
+.btn {
+    text-transform: lowercase;
+}
+
+.btn::first-letter {
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+section{
+    padding: 2rem 9%;
+}
+
+section:nth-child(even){
+    background: #eee;
+}
+
+.sub-heading{
+    text-align: center;
+    color: var(--green);
+    font-size: 3rem;
+    padding-top: 1rem;
+}
+.heading{
+    text-align: center;
+    color: var(--black);
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--black);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+}
+.btn:hover{
+    background: var(--green);
+    letter-spacing: .1rem;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 1rem 7%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 0 1px 0 ;
+    
+}
+header .logo{
+    color:var(--black);
+    font-size: 2.5rem;
+    font-weight: bolder;
+    
+}
+header .logo i{
+    color: var(--red);
+}
+header .navbar a{
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding:.5rem 1.5rem;
+    color: var(--light-color);
+}
+header .navbar a:active,
+header .navbar a:hover{
+    color: #fff;
+    background: var(--green);
+}
+header .icons i,
+header .icons a{
+    cursor:pointer;
+    margin-left: .5rem;
+    height:4.5rem;
+    line-height: 4.5rem;
+    width: 4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color: var(--black);
+    border-radius: 50%;
+    background: #eee;
+}
+header .icons i:hover,
+header .icons a:hover{
+    color: #fff;
+    background: var(--green);
+    transform: rotate(360deg);
+}
+header .icons #menu-bars{
+    display: none;
+}
+.about .row {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.about .row .image {
+    flex: 1 1 45%;
+}
+
+.about .row .image img {
+    width: 100%;
+}
+
+.about .row .content {
+    flex: 1 1 50%;
+}
+.about .row .content h3{
+    color: var(--black);
+    font-size: 4rem;
+    padding: .5rem 0;
+}
+.about .row .content p{
+    color: var(--light-color);
+    font-size: 1.5rem;
+    padding: .5rem 0;
+    line-height: 2;
+}
+.about .row .content .icons-container{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    margin-top: .5rem;
+}
+.about .row .content .icons-container .icons{
+    background: #eee;
+    border-radius: .5rem;
+    border: .1rem solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex: 1 1 17rem;
+    padding: 1.5rem 1rem;
+}
+.about .row .content .icons-container .icons i{
+    font-size:2.5rem ;
+    color: var(--green);
+}
+.about .row .content .icons-container .icons span{
+    font-size:1.5rem ;
+    color: var(--black);
+}
+
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr) );
+    gap: 1.5rem;
+}
+.menu .box-container .box{
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Set a fixed height for consistent alignment */    
+    width: 100%; /* Adjust this based on your design */
+    max-width: 500px; /* Adjust this based on your design */  
+    padding: 5.5rem; 
+    padding-left: .9rem;  
+    padding-top: .9rem;padding-bottom: .9rem;
+    padding-right: .9rem;
+    background: #fff;
+    border-radius: .5rem;
+    border: .1rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px  2px 0 ;
+    position: relative;
+    overflow: hidden;
+    text-align: center;    
+}
+.menu .box-container .box .image{
+    height: 25rem;  
+    width: 100%;
+    padding: 1.5rem;
+    overflow: hidden;
+    position: relative;
+}
+.menu .box-container .box .image img{
+    height: 100%;
+    width: 100%;
+    border-radius: .5rem;
+    object-fit: cover;
+}
+.menu .box-container .box .image .fa-heart{
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    text-align: center; 
+    background: #ecebeb;
+    border-radius: 50%;
+    color: var(--black);*/
+}
+.menu .box-container .box .image .fa-heart:hover{
+    background-color: var(--green);
+    color: #fff;
+}
+.menu .box-container .box .content{
+    padding: 2rem;
+    padding-top: 0 ;
+}
+.menu .box-container .box .content .starts{
+    padding-bottom: 1rem;
+}
+.menu .box-container .box .content .starts i{
+    font-size: 1.7rem;
+    color: var(--green);
+}
+.menu .box-container .box .content h3{
+    color: var(--black);
+    font-size: 2.5rem;
+}
+.menu .box-container .box .content p{
+    color: var(--light-colork);
+    font-size: 1.7rem;
+    padding: .5rem 0;
+    line-height: 1.5;
+}
+.menu .box-container .box .content .pice{
+     color: var(--green);
+     margin-left: 1rem;
+     font-size: 2.5rem;
+}
+.feedback-form {
+    text-align: center;
+    padding: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 20px solid #ccc;    
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    background: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    color: var(--green);
+    color: #fff; /* Font color is set to white */
+    letter-spacing: 1rem;
+}
+
+
+
+/* Add this to your existing CSS code or in a new style tag */
+.welcome-text {
+    background-color: goldenrod;
+    margin: 40px 0px 40px 0px;
+    text-align: center;  
+    padding: 10px 0px 10px 0px;
+   
+}
+
+.welcome-text h2 {
+    font-family: 'Lobster', sans-serif;
+    font-size: 60px;
+    font-weight: bolder; 
+    text-transform:none;
+
+    color: #15055c;
+
+}
+
+.welcome-text h3{
+    font-family:'Nunito', sans-serif ;
+    font-size: 30px;
+    font-weight: bolder;   
+    color: #15055c;
+}
+
+.welcome-text p{
+    font-family:'Nunito', sans-serif ;
+    font-size: 20px;
+    font-weight: bolder;   
+    color: #15055c;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .about .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about .row .image,
+    .about .row .content {
+        flex: 1 1 100%;
+    }
+}
+
+
+
+
+
+
+@media (max-width:940px){
+    html{
+        font-size: 55%;
+}
+
+header{
+    padding: 1rem 2rem;
+}
+section{
+    padding: 2rem;
+}
+}
+
+
+@media (max-width:768px){
+   header .icons #menu-bars{
+        display: inline-block;
+    }
+    header .navbar{
+        position:absolute;
+        top: 100%;
+        left: 0;
+       right: 0;
+       background: #fff;
+       border-top: .1rem solid rgba(0,0,0 .2);
+       border-bottom: .1rem solid rgba(0,0,0 .2) ;
+       padding: 1rem;
+      clip-path: polygon(0 0,100% 0,100% 0,0 0);
+       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); /* Add box shadow for distinction */
+
+    }
+
+    header .navbar.active{
+        clip-path: polygon(0 0,100% 0,100% 100%,0 100%); 
+    }
+    header .navbar a{
+    display: block;
+    padding: 1.5rem;
+    margin: 1rem ;
+    font-size: 2rem;
+    background: #eee;
+    }
+    #search-form #search-box{
+        width: 90%;
+        margin: 0 1rem;
+    } 
+    .home .home-slider .slide .content h3{
+        font-size: 5rem;
+    }
+}
+
+@media (max-width:940px){
+    html{
+        font-size: 50%;
+}
+}
+
+#search-form{
+    position: fixed;
+    top:-110%; left: 0;
+    height: 100%; width: 100%;
+    z-index: 1004;
+    background: rgba(0,0,0,.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+#search-form.active{
+    top: 0;
+}
+
+#search-form #search-box{
+    width: 50rem;
+    border-bottom: .1rem solid #fff;
+    padding: 1rem 0;
+    color:#fff;
+    font-size: 3rem;
+    text-transform: none;
+    background: none;
+}
+
+#search-form #search-box::placeholder{
+    color: #eee;
+}
+#search-form #search-box::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+}
+#search-form label{
+    color: #fff !important;
+    cursor: pointer;
+    font-size: 3rem;
+}
+#search-form label:hover{
+    color:var(--green)
+}
+
+#search-form #close {
+    position: absolute;
+    color: #fff !important;
+    cursor: pointer;
+    top: 2rem; right: 3rem;
+    font-size: 5rem;
+}
+.home .home-slider .slide{
+    display: flex;
+    align-items:center ;
+    flex-wrap:wrap;
+    gap : 2rem;
+    padding-top : 9rem;
+}
+.home .home-slider .slide .content{
+    flex: 1 1 45rem;
+}
+.home .home-slider .slide .image{
+    flex: 1 1 45rem;
+}
+
+.home .home-slider .slide .image img{
+    width: 100%;
+}
+.home .home-slider .slide .content span{
+    color:var(--red);
+    font-size: 2.5rem;
+}
+.home .home-slider .slide .content h3{
+    color:var(--black);
+    font-size: 7rem;
+}
+.home .home-slider .slide .content p{
+    color:var(--light-color);
+    font-size: 2.2rem;
+    padding: .5rem 0;
+    line-height: 1.5;
+}
+.swiper-pagination-bullet-active{
+    background: var(--green);
+}
+
+.dishes .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr) );
+    gap: 1.5rem;
+}
+.dishes .box-container .box{
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Set a fixed height for consistent alignment */    
+    width: 100%; /* Adjust this based on your design */
+    max-width: 500px; /* Adjust this based on your design */ 
+    margin:  1.5rem; /* Adjust this value for equal spacing */  
+    padding: 1.5rem;    
+    background: #fff;
+    border-radius: .5rem;
+    border: .1rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px  2px 0 ;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+.dishes .box-container .box h3{
+    margin-top: 0; /* Reset default margin to eliminate any extra space */
+    margin-bottom: auto; /* Align h3 to the top */
+    font-size: 2.5rem; /* Adjust the font size as needed */
+}
+.dishes .box-container .box .stars{
+    padding: 1rem 0;
+}
+.dishes .box-container .box .stars i{
+    font-size: 1.7rem;
+    color: var(--green);
+}
+.dishes .box-container .box span{
+    color: var(--black);
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.dishes .box-container .box img {
+    flex: 1; /* Make the image flexible to take remaining space */
+    width: 100%;
+    height: calc(100% - .1rem); /* Adjust the height to leave space at the top */
+    object-fit: cover; /* This ensures the image covers the entire container */
+    display: block; /* Removes extra space below the image */
+    position: relative;
+    z-index: 1;
+}
+.dishes .box-container .box .btn {
+    margin-top: auto; /* Align the button to the bottom */
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--black);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+}
+.dishes .box-container .box .btn:hover {
+    background: var(--green);
+    letter-spacing: .1rem;
+}
+.dishes .box-container .box .heart-icon-container .fa-heart
+/*.dishes .box-container .box .fa-eye*/ {
+    margin-top: 0.5rem; /* Adjust the margin-top as needed */
+    position: absolute;
+    top: 0.1rem;
+    right: 1.5rem;
+    background: #fff;
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: var(--black);
+    z-index: 2; /* Set a higher z-index for the eye icon */
+}
+.dishes .box-container .box .eye-icon-container .fa-eye{
+    margin-top: 0.5rem; /* Adjust the margin-top as needed */
+    position: absolute;
+    top: 0.1rem;
+    left: 1.5rem;
+    background: #fff;
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: var(--black);
+    z-index: 2; /* Set a higher z-index for the eye icon */
+}
+.dishes .box-container .box .fa-heart:hover,
+.dishes .box-container .box .fa-eye:hover {
+    background: var(--green);
+    color: #fff;
+}
+.dishes .box-container .box a.fa-heart{
+    right: -15rem!important;
+    top: 0.1rem;   
+}
+
+.dishes .box-container .box .fa-eye {    
+    left: -15rem!important; /* Adjust the left position for the eye icon */
+    top: 0.1rem;   
+}
+.dishes .box-container .box:hover a.fa-heart{
+    right: 1.5rem!important;   
+}
+
+.dishes .box-container .box:hover .fa-eye {    
+    left: 1.5rem!important; /* Adjust the left position for the eye icon */    
+}
+
+.contact-section {
+    padding: 40px;
+    background: #eee;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.contact-section h2 {
+    color: #333;
+}
+
+.contact-section p {
+    margin-bottom: 10px;
+}
+
+.contact-section a {
+    color: #3498db;
+}
+
+
+
+.footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: right;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+}
+
+.footer-icons {
+    font-size: 24px;
+}
+.footer-icons a[href^="mailto"] {
+    text-transform: lowercase !important;
+}
+/*.contact-section .row .content p {
+    color: var(--light-color);
+    font-size: 1.5rem;
+    padding: .5rem 0;
+    line-height: 2;
+}*/
+
+
+
+.footer-icons a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-icons a:hover {
+    color: #00ff00; /* Change color on hover if desired */
+}
